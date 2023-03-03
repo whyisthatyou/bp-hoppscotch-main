@@ -253,7 +253,7 @@ const nativeShare = () => {
     navigator
       .share({
         title: "Hoppscotch",
-        text: "Hoppscotch • Open source API development ecosystem - Helps you create requests faster, saving precious time on development.",
+        text: "接口测试平台",
         url: "https://hoppscotch.io",
       })
       .catch(console.error)

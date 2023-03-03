@@ -2,7 +2,7 @@ import { IHTMLTag } from "vite-plugin-html-config"
 
 export const APP_INFO = {
   name: "Hoppscotch",
-  shortDescription: "Open source API development ecosystem",
+  shortDescription: "接口测试平台",
   description:
     "Helps you create requests faster, saving precious time on development.",
   keywords:
@@ -26,7 +26,7 @@ export const META_TAGS = (env: Record<string, string>): IHTMLTag[] => [
   },
   {
     name: "name",
-    content: `${APP_INFO.name} • ${APP_INFO.shortDescription}`,
+    content: "接口测试平台",
   },
   {
     name: "description",
@@ -39,7 +39,7 @@ export const META_TAGS = (env: Record<string, string>): IHTMLTag[] => [
   // Open Graph tags
   {
     name: "og:title",
-    content: `${APP_INFO.name} • ${APP_INFO.shortDescription}`,
+    content: "接口测试平台",
   },
   {
     name: "og:description",
@@ -64,7 +64,7 @@ export const META_TAGS = (env: Record<string, string>): IHTMLTag[] => [
   },
   {
     name: "twitter:title",
-    content: `${APP_INFO.name} • ${APP_INFO.shortDescription}`,
+    content: "接口测试平台",
   },
   {
     name: "twitter:description",

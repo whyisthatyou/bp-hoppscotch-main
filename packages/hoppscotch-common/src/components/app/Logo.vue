@@ -1,3 +1,6 @@
+<!-- xmlns="http://www.w3.org/2000/svg"仅仅只是一些字符串，
+  所以SVG上那些看起来像URI的命名空间并不重要。
+  因为URIs的唯一性从而被广泛使用，它的本意并不是要“链接”到某个地址。-->
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"

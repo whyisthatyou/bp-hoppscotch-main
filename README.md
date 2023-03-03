@@ -180,7 +180,7 @@ _Official proxy server is hosted by Hoppscotch - **[GitHub](https://github.com/h
 
 > **[Read our documentation on Keyboard Shortcuts](https://docs.hoppscotch.io/features/shortcuts)**
 
-🌎 **i18n:** Experience the app in your language.
+🌎 **i18n:** 国际化语言，目前支持中文、英文
 
 Help us to translate Hoppscotch. Please read [`TRANSLATIONS`](TRANSLATIONS.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
