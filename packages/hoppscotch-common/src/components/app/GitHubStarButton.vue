@@ -1,7 +1,7 @@
 <template>
   <GithubButton
-    title="Star Hoppscotch on GitHub"
-    href="https://github.com/hoppscotch/hoppscotch"
+    title="全行都在用的开源自研测试平台"
+    href="https://知识库"
     :data-color-scheme="
       colorMode.value != 'light'
         ? colorMode.value == 'black'
@@ -10,8 +10,8 @@
         : 'light'
     "
     data-show-count="true"
-    data-text="Star"
-    aria-label="Star Hoppscotch on GitHub"
+    data-text="测试案例 10000+"
+    aria-label="全行都在用的开源自研测试平台"
     :data-size="size"
   />
 </template>

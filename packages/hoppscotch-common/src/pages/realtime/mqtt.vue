@@ -126,13 +126,7 @@
             @click="showSubscriptionModal(true)"
           />
           <span class="flex">
-            <HoppButtonSecondary
-              v-tippy="{ theme: 'tooltip' }"
-              to="https://docs.hoppscotch.io/features/mqtt"
-              blank
-              :title="t('app.wiki')"
-              :icon="IconHelpCircle"
-            />
+
           </span>
         </div>
       </div>

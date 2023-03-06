@@ -20,13 +20,7 @@
         @click="displayModalAdd(true)"
       />
       <div class="flex">
-        <HoppButtonSecondary
-          v-tippy="{ theme: 'tooltip' }"
-          to="https://docs.hoppscotch.io/features/environments"
-          blank
-          :title="t('app.wiki')"
-          :icon="IconHelpCircle"
-        />
+
         <HoppButtonSecondary
           v-if="team !== undefined && team.myRole === 'VIEWER'"
           v-tippy="{ theme: 'tooltip' }"

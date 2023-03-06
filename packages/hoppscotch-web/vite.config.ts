@@ -101,6 +101,7 @@ export default defineConfig({
       runtimeOnly: false,
       compositionOnly: true,
       include: [path.resolve(__dirname, "locales")],
+      
     }),
     WindiCSS({
       root: path.resolve(__dirname, "../hoppscotch-common"),

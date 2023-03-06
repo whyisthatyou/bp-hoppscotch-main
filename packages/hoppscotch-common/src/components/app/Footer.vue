@@ -40,11 +40,7 @@
           theme="popover"
           :on-shown="() => tippyActions!.focus()"
         >
-          <HoppButtonSecondary
-            :icon="IconHelpCircle"
-            class="!rounded-none"
-            :label="`${t('app.help')}`"
-          />
+
           <template #content="{ hide }">
             <div
               ref="tippyActions"
@@ -55,15 +51,7 @@
               @keyup.c="chat!.$el.click()"
               @keyup.escape="hide()"
             >
-              <HoppSmartItem
-                ref="documentation"
-                :icon="IconBook"
-                :label="`${t('app.documentation')}`"
-                to="https://docs.hoppscotch.io"
-                blank
-                :shortcut="['D']"
-                @click="hide()"
-              />
+
               <HoppSmartItem
                 ref="shortcuts"
                 :icon="IconZap"
@@ -156,13 +144,7 @@
           :icon="IconZap"
           @click="invokeAction('flyouts.keybinds.toggle')"
         />
-        <HoppButtonSecondary
-          v-if="navigatorShare"
-          v-tippy="{ theme: 'tooltip' }"
-          :icon="IconShare2"
-          :title="t('request.share')"
-          @click="nativeShare()"
-        />
+
         <HoppButtonSecondary
           v-tippy="{ theme: 'tooltip' }"
           :title="COLUMN_LAYOUT ? t('layout.row') : t('layout.column')"
@@ -206,7 +188,6 @@ import IconShare2 from "~icons/lucide/share-2"
 import IconColumns from "~icons/lucide/columns"
 import IconSidebarOpen from "~icons/lucide/sidebar-open"
 import IconShieldCheck from "~icons/lucide/shield-check"
-import IconHelpCircle from "~icons/lucide/help-circle"
 import IconBook from "~icons/lucide/book"
 import IconMessageCircle from "~icons/lucide/message-circle"
 import IconGift from "~icons/lucide/gift"

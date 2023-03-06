@@ -10,22 +10,17 @@
           paddingLeft: platform.ui?.appHeader?.paddingLeft?.value,
         }"
       >
+      <!--页面最上方横条的布局 最左边的：接口测试平台-->
         <HoppButtonSecondary
           class="tracking-wide !font-bold !text-secondaryDark hover:bg-primaryDark focus-visible:bg-primaryDark uppercase"
           :label="t('app.name')"
           to="/"
         />
-        <AppGitHubStarButton class="mt-1.5 transition <sm:hidden" />
+       
       </div>
+
+      <!--页面最上方横条的布局 搜索按钮-->
       <div class="inline-flex items-center space-x-2">
-        <HoppButtonSecondary
-          v-if="showInstallButton"
-          v-tippy="{ theme: 'tooltip' }"
-          :title="t('header.install_pwa')"
-          :icon="IconDownload"
-          class="rounded hover:bg-primaryDark focus-visible:bg-primaryDark"
-          @click="installPWA()"
-        />
         <HoppButtonSecondary
           v-tippy="{ theme: 'tooltip', allowHTML: true }"
           :title="`${t('app.search')} <kbd>/</kbd>`"
@@ -33,6 +28,8 @@
           class="rounded hover:bg-primaryDark focus-visible:bg-primaryDark"
           @click="invokeAction('modals.search.toggle')"
         />
+
+        <!-- 页面最上方横条的布局 支持按钮-->
         <HoppButtonSecondary
           v-tippy="{ theme: 'tooltip', allowHTML: true }"
           :title="`${
@@ -42,6 +39,8 @@
           class="rounded hover:bg-primaryDark focus-visible:bg-primaryDark"
           @click="invokeAction('modals.support.toggle')"
         />
+
+         <!-- 页面最上方横条的布局 保存工作区-->
         <HoppButtonSecondary
           v-if="currentUser === null"
           :icon="IconUploadCloud"
@@ -50,11 +49,14 @@
           class="hidden md:flex"
           @click="invokeAction('modals.login.toggle')"
         />
+
+         <!-- 页面最上方横条的布局 登陆-->
         <HoppButtonPrimary
           v-if="currentUser === null"
           :label="t('header.login')"
           @click="invokeAction('modals.login.toggle')"
         />
+        
         <div v-else class="inline-flex items-center space-x-2">
           <HoppButtonPrimary
             v-tippy="{ theme: 'tooltip' }"
@@ -161,16 +163,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref } from "vue"
+import { reactive, ref } from "vue"
 import IconUser from "~icons/lucide/user"
 import IconSettings from "~icons/lucide/settings"
-import IconDownload from "~icons/lucide/download"
 import IconSearch from "~icons/lucide/search"
 import IconLifeBuoy from "~icons/lucide/life-buoy"
 import IconUploadCloud from "~icons/lucide/upload-cloud"
 import IconUserPlus from "~icons/lucide/user-plus"
 import { breakpointsTailwind, useBreakpoints, useNetwork } from "@vueuse/core"
-import { pwaDefferedPrompt, installPWA } from "@modules/pwa"
 import { platform } from "~/platform"
 import { useI18n } from "@composables/i18n"
 import { useReadonlyStream } from "@composables/stream"
@@ -178,13 +178,7 @@ import { invokeAction } from "@helpers/actions"
 
 const t = useI18n()
 
-/**
- * Once the PWA code is initialized, this holds a method
- * that can be called to show the user the installation
- * prompt.
- */
 
-const showInstallButton = computed(() => !!pwaDefferedPrompt.value)
 
 const showTeamsModal = ref(false)
 

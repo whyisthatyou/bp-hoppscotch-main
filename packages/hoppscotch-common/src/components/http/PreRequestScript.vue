@@ -7,13 +7,7 @@
         {{ t("preRequest.javascript_code") }}
       </label>
       <div class="flex">
-        <HoppButtonSecondary
-          v-tippy="{ theme: 'tooltip' }"
-          to="https://docs.hoppscotch.io/features/pre-request-script"
-          blank
-          :title="t('app.wiki')"
-          :icon="IconHelpCircle"
-        />
+
         <HoppButtonSecondary
           v-tippy="{ theme: 'tooltip' }"
           :title="t('action.clear')"

@@ -29,11 +29,11 @@ export function createHoppApp(el: string | Element, platformDef: PlatformDef) {
   app.mount(el)
 
   console.info(
-    "%cWE ♥️ OPEN SOURCE",
+    "%cHELLO ♥️ WORLD!",
     "margin:8px 0;font-family:sans-serif;font-weight:600;font-size:60px;color:violet;"
   )
   console.info(
-    "%cContribute: https://github.com/hoppscotch/hoppscotch",
+    "%c欢迎登陆接口测试平台",
     "margin:8px 0;font-family:sans-serif;font-weight:500;font-size:24px;color:violet;"
   )
 }

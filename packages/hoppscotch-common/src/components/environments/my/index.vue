@@ -10,13 +10,7 @@
         @click="displayModalAdd(true)"
       />
       <div class="flex">
-        <HoppButtonSecondary
-          v-tippy="{ theme: 'tooltip' }"
-          to="https://docs.hoppscotch.io/features/environments"
-          blank
-          :title="t('app.wiki')"
-          :icon="IconHelpCircle"
-        />
+
         <HoppButtonSecondary
           v-tippy="{ theme: 'tooltip' }"
           :icon="IconArchive"

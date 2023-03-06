@@ -175,13 +175,7 @@
               >
                 {{ t("state.enabled") }}
               </HoppSmartCheckbox>
-              <HoppButtonSecondary
-                v-tippy="{ theme: 'tooltip' }"
-                to="https://docs.hoppscotch.io/features/authorization"
-                blank
-                :title="t('app.wiki')"
-                :icon="IconHelpCircle"
-              />
+
               <HoppButtonSecondary
                 v-tippy="{ theme: 'tooltip' }"
                 :title="t('action.clear')"

@@ -55,13 +55,7 @@
             class="flex flex-1 p-4 py-2 bg-transparent"
           />
           <div class="flex">
-            <HoppButtonSecondary
-              v-tippy="{ theme: 'tooltip' }"
-              to="https://docs.hoppscotch.io/quickstart/graphql"
-              blank
-              :title="t('app.wiki')"
-              :icon="IconHelpCircle"
-            />
+
           </div>
         </div>
         <HoppSmartTabs
@@ -139,13 +133,7 @@
           {{ t("graphql.schema") }}
         </label>
         <div class="flex">
-          <HoppButtonSecondary
-            v-tippy="{ theme: 'tooltip' }"
-            to="https://docs.hoppscotch.io/quickstart/graphql"
-            blank
-            :title="t('app.wiki')"
-            :icon="IconHelpCircle"
-          />
+
           <HoppButtonSecondary
             v-tippy="{ theme: 'tooltip' }"
             :title="t('state.linewrap')"

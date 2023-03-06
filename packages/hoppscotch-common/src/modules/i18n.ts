@@ -7,7 +7,8 @@ import { HoppModule } from "."
 
 import languages from "../../languages.json"
 
-import en from "../../locales/en.json"
+import cn from "../../locales/cn.json"
+
 import { throwError } from "~/helpers/functional/error"
 import { getLocalConfig, setLocalConfig } from "~/newstore/localpersistence"
 
@@ -43,7 +44,7 @@ type LanguagesDef = {
   dir?: "ltr" | "rtl" // Text Orientation (defaults to 'ltr')
 }
 
-const FALLBACK_LANG_CODE = "en"
+const FALLBACK_LANG_CODE = "cn"
 
 // TypeScript cannot understand dir is restricted to "ltr" or "rtl" yet, hence assertion
 export const APP_LANGUAGES: LanguagesDef[] = languages as LanguagesDef[]
@@ -107,7 +108,7 @@ export const changeAppLanguage = async (locale: string) => {
   if (!i18nInstance) {
     throw new Error("Tried to change language without active i18n instance")
   }
-
+console.log(locale)
   i18nInstance.global.setLocaleMessage(locale, localeData)
 
   // TODO: Look into the type issues here
@@ -119,24 +120,25 @@ export const changeAppLanguage = async (locale: string) => {
 export default <HoppModule>{
   onVueAppInit(app) {
     const i18n = createI18n(<I18nOptions>{
-      locale: "en", // TODO: i18n system!
-      fallbackLocale: "en",
+      locale: "cn", // 设置初始语言为中文
+      fallbackLocale: "cn",
       legacy: false,
       allowComposition: true,
 
       // TODO: Fix this to allow for dynamic imports
       messages: {
-        en,
+        cn,
       },
     })
 
     app.use(i18n)
+    
 
     i18nInstance = i18n
+    i18nInstance.global.locale.value = 'cn'
 
     // TODO: Global loading state to hide the resolved lang loading
     const currentLocale = resolveCurrentLocale()
-    changeAppLanguage(currentLocale)
 
     setLocalConfig("locale", currentLocale)
   },
@@ -148,6 +150,7 @@ export default <HoppModule>{
 
     // Change language to the correct lang code
     if (oldLocalePathLangCode) {
+      console.log("oldLocalePathLangCode"+oldLocalePathLangCode)
       changeAppLanguage(oldLocalePathLangCode)
 
       router.replace(to.path.substring(`/${oldLocalePathLangCode}`.length))

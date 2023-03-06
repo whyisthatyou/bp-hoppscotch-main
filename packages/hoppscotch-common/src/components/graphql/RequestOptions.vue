@@ -37,13 +37,7 @@
               class="rounded-none"
               @click="saveRequest"
             />
-            <HoppButtonSecondary
-              v-tippy="{ theme: 'tooltip' }"
-              to="https://docs.hoppscotch.io/graphql"
-              blank
-              :title="t('app.wiki')"
-              :icon="IconHelpCircle"
-            />
+
             <HoppButtonSecondary
               v-tippy="{ theme: 'tooltip' }"
               :title="t('action.clear_all')"
@@ -85,13 +79,7 @@
             {{ t("request.variables") }}
           </label>
           <div class="flex">
-            <HoppButtonSecondary
-              v-tippy="{ theme: 'tooltip' }"
-              to="https://docs.hoppscotch.io/graphql"
-              blank
-              :title="t('app.wiki')"
-              :icon="IconHelpCircle"
-            />
+
             <HoppButtonSecondary
               v-tippy="{ theme: 'tooltip' }"
               :title="t('action.clear_all')"
@@ -135,13 +123,7 @@
             {{ t("tab.headers") }}
           </label>
           <div class="flex">
-            <HoppButtonSecondary
-              v-tippy="{ theme: 'tooltip' }"
-              to="https://docs.hoppscotch.io/graphql"
-              blank
-              :title="t('app.wiki')"
-              :icon="IconHelpCircle"
-            />
+
             <HoppButtonSecondary
               v-tippy="{ theme: 'tooltip' }"
               :title="t('action.clear_all')"

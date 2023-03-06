@@ -83,13 +83,7 @@
         >
           {{ t("mqtt.clear_input") }}
         </HoppSmartCheckbox>
-        <HoppButtonSecondary
-          v-tippy="{ theme: 'tooltip' }"
-          to="https://docs.hoppscotch.io/realtime"
-          blank
-          :title="t('app.wiki')"
-          :icon="IconHelpCircle"
-        />
+
         <HoppButtonSecondary
           v-tippy="{ theme: 'tooltip' }"
           :title="t('action.clear')"

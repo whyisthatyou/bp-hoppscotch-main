@@ -31,16 +31,6 @@
           {{ t("support.title") }}
         </h2>
         <HoppSmartItem
-          :icon="IconBook"
-          :label="t('app.documentation')"
-          to="https://docs.hoppscotch.io"
-          :description="t('support.documentation')"
-          :info-icon="IconChevronRight"
-          active
-          blank
-          @click="hideModal()"
-        />
-        <HoppSmartItem
           :icon="IconGift"
           :label="t('app.whats_new')"
           to="https://docs.hoppscotch.io/changelog"

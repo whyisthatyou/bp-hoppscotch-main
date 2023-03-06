@@ -42,10 +42,6 @@
 import IconCopy from "~icons/lucide/copy"
 import IconCheck from "~icons/lucide/check"
 import IconMail from "~icons/lucide/mail"
-import IconTwitter from "~icons/brands/twitter"
-import IconFacebook from "~icons/brands/facebook"
-import IconReddit from "~icons/brands/reddit"
-import IconLinkedIn from "~icons/brands/linkedin"
 import { refAutoReset } from "@vueuse/core"
 import { copyToClipboard } from "~/helpers/utils/clipboard"
 import { useI18n } from "@composables/i18n"
@@ -80,27 +76,7 @@ const platforms = [
   {
     name: "Email",
     icon: IconMail,
-    link: `mailto:?subject=${subject}&body=${summary}`,
-  },
-  {
-    name: "Twitter",
-    icon: IconTwitter,
-    link: `https://twitter.com/intent/tweet?text=${text} ${description}&url=${url}&via=${twitter}`,
-  },
-  {
-    name: "Facebook",
-    icon: IconFacebook,
-    link: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
-  },
-  {
-    name: "Reddit",
-    icon: IconReddit,
-    link: `https://www.reddit.com/submit?url=${url}&title=${text}`,
-  },
-  {
-    name: "LinkedIn",
-    icon: IconLinkedIn,
-    link: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+    link: `https://www.qq.com/sharing/share-offsite/?url=${url}`,
   },
 ]
 
